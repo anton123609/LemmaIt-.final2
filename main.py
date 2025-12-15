@@ -48,7 +48,7 @@ if st.session_state.current_page != selection:
 
 # --- 3. QR CODE ---
 st.sidebar.divider()
-app_url = "https://ito-lemma-pr-si.streamlit.app"
+app_url = "https://lemmait-final2-gapbdy7twcpcrilclc3sye.streamlit.app/"
 
 qr_image = qrcode.make(app_url)
 img_buffer = BytesIO()
@@ -95,4 +95,5 @@ if current_file_path:
             # Als Code-Block anzeigen
             st.code(code_content, language="python")
         except FileNotFoundError:
+
             st.error(f"File not found: {current_file_path}")
