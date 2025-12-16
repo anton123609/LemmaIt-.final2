@@ -2,26 +2,25 @@ import streamlit as st
 
 def show():
     # --- LAYOUT SETUP ---
-    # Wir nutzen 3 Spalten, damit der Inhalt schön mittig zentriert ist
     col_left, col_center, col_right = st.columns([1, 2, 1])
 
     with col_center:
         
         # --- 1. TITEL & SUBTITEL ---
-        st.write("") # Etwas Abstand nach oben
+        st.write("") 
         st.markdown("<h1 style='text-align: center; font-size: 4em;'>Ito's Lemma</h1>", unsafe_allow_html=True)
         st.markdown("<h3 style='text-align: center; color: gray;'>Journal Review Group 8</h3>", unsafe_allow_html=True)
         
         st.divider()
 
-        # --- 2. NAMEN ---
+        # --- 2. NAMES ---
         st.markdown("<p style='text-align: center; font-size: 1.2em; font-weight: bold;'>Presented by:</p>", unsafe_allow_html=True)
         st.markdown("<p style='text-align: center; font-size: 1.5em;'>Anton Jungbauer, Julian Baur, Leander Friedmann, Emil Höfer, Luca Russo, Abdoulie Njie</p>", unsafe_allow_html=True)
         
-        st.write("") # Abstand
+        st.write("") 
         st.write("") 
 
-        # --- 3. THESE (Hervorgehoben) ---
+        # --- 3. THESIS ---
         st.info("### Core Thesis")
         st.markdown("""
         > The classical chain rule isn't working in the world of randomness.""")
@@ -41,9 +40,8 @@ This work concludes that the Ito lemma is an indispensable tool for solving stoc
         st.write("")
         st.write("")
 
-        # --- 5. QUELLEN (SOURCES) ---
-        # Ein "Expander" ist gut für Quellen, damit sie nicht so viel Platz wegnehmen, 
-        # aber aufklappbar sind.
+        # --- 5. SOURCES ---
+
         with st.expander("References / Sources"):
             st.markdown("""
             * *https://math.nyu.edu/~goodman/teaching/StochCalc2018/notes/Lesson4.pdf*
@@ -56,4 +54,5 @@ This work concludes that the Ito lemma is an indispensable tool for solving stoc
             """)
             
         st.write("")
+
         st.caption("Project Presentation • 2026")
