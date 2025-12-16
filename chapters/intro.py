@@ -9,9 +9,9 @@ def show():
         # --- HERO SECTION ---
         st.markdown("<h1 style='text-align: center; font-size: 3.5em;'>Ito's Lemma</h1>", unsafe_allow_html=True)
         
-        st.write("") # Abstand
+        st.write("") 
         
-        # --- DIE GROSSE FORMEL (Original) ---
+        # --- Original formula ---
         st.markdown("<p style='text-align: center; font-weight: bold;'>Formula:</p>", unsafe_allow_html=True)
         st.latex(r'''
         df(t, X_t) = \left( \frac{\partial f}{\partial t} + \mu \frac{\partial f}{\partial x} + \frac{1}{2} \sigma^2 \frac{\partial^2 f}{\partial x^2} \right) dt + \sigma \frac{\partial f}{\partial x} dW_t
@@ -37,13 +37,13 @@ def show():
 
         st.divider()
         
-        # --- NOTATION NOTE ---
+        # --- NOTATION ---
         st.subheader("Simplification with substitution")
         st.write("""
         To make it more understandable, 
         we will strictly use the Simplified Notation throughout this presentation and we will resubstitute in the end.
         """)
-            # Kleine Legende
+            # Legend
         st.info("Legend:")
         st.markdown("""
         * $f_t$: Change with **Time** - Partial derivative of f to t.
@@ -73,15 +73,15 @@ def show():
         df = f_t \cdot dt + f_x \cdot dx
         ''')
 
-        st.write("") # Abstand
+        st.write("") 
 
-        # --- STEP 2: TAYLOR EXPANSION ---
+        # --- STEP 2: TAYLOR Series ---
         st.header("2. Taylor Series for differential equations with two variables")
         st.write("""
         Derivatives may be portrayed as a infinite expansion with higher orders.
         """)
 
-        # Erweiterte Taylor Formel (bis zur 3. Ordnung)
+        # Tylor Series up to 3. order
         st.latex(r'''
         df = \underbrace{f_t dt + f_x dx}_{\text{1st Order}} 
         + \underbrace{\frac{1}{2} f_{xx} (dx)^2}_{\text{2nd Order}}
@@ -89,7 +89,7 @@ def show():
         + \dots
         ''')
 
-        # Erklärung, warum alles wegfällt
+        # Why unimportant
         st.warning("""
         **Why standard Calculus ignores the tail:**
         
@@ -111,14 +111,14 @@ def show():
         
         st.write("We define our variable $X_t$ by the following Stochastic Differential Equation (SDE):")
 
-        # Die Differentialgleichung (SDE)
+        # Differential equation
         st.latex(r'''
         dX_t = \underbrace{\mu \cdot dt}_{\text{The Drift}} + \underbrace{\sigma \cdot dW_t}_{\text{The Diffusion}}
         ''')
         
         st.write("")
         
-        # --- HIER IST DIE NEUE ERKLÄRUNG (Gegenüberstellung) ---
+        # --- Comparison ---
         col_drift, col_diff = st.columns(2)
         
         with col_drift:
@@ -143,4 +143,5 @@ def show():
             """)
         
         st.divider()
+
         st.caption("Swipe to next chapter >")
