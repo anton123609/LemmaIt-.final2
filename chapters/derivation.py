@@ -1,7 +1,7 @@
 import streamlit as st
 
 def show():
-    # --- LAYOUT SETUP (Apple Style) ---
+    # --- LAYOUT SETUP ---
     col_left, col_center, col_right = st.columns([1, 2, 1])
 
     with col_center:
@@ -63,7 +63,7 @@ def show():
         st.markdown("**4. Analyze the size (Limits):**")
         st.write("Now we check what happens as time steps ($dt$) become infinitely small.")
 
-        # Korrigierte Tabelle mit Raw-String (r""")
+        # Table
         st.markdown(r"""
         | Term | Value | Reason |
         | :--- | :--- | :--- |
@@ -96,7 +96,7 @@ def show():
         
         st.write(r"Imagine a very small time step: **$dt = 0.01$**.")
 
-        # Korrigierte Tabelle mit Raw-String (r""")
+        # table 2
         st.markdown(r"""
         | Term | Formula | Value (if $dt=0.01$) | Decision |
         | :--- | :--- | :--- | :--- |
@@ -218,4 +218,5 @@ def show():
         df(t, X_t) = \left( \frac{\partial f}{\partial t} + \mu \frac{\partial f}{\partial x} + \frac{1}{2} \sigma^2 \frac{\partial^2 f}{\partial x^2} \right) dt + \sigma \frac{\partial f}{\partial x} dW_t
         ''')
         
+
         st.caption("q.e.d. - quod erat demonstrandum")
