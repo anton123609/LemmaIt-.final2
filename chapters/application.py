@@ -14,7 +14,7 @@ def show():
         # ==========================================
         # 1. VISUAL INTUITION (FULL TEXT)
         # ==========================================
-        st.header("1. Intuiton for stochatsic chain rule")
+        st.header("1. Intuiton for stochastic chain rule")
         
         st.write("""
         At first we need to understand why the deterministic approach fails with stochastic.
@@ -291,4 +291,5 @@ def show():
         Because markets are rough and not smooth, we cannot use simple derivatives.
         We have to use Itô's Lemma and have to subtract the "energy" of volatility ($1/2 \sigma^2$). 
         Without this correction, every financial model would overestimate profits and underestimate risk.
+
         """)
