@@ -29,7 +29,7 @@ def show():
         st.info("Info to remember: A derivative is nothing else then the change of f at a certain ``point´´ x. ")
 
         # --- DATA GENERATION ---
-        n_points = 100000 
+        n_points = 50000
         t = np.linspace(0, 1, n_points) 
         
         # 1. Smooth (Sine Wave)
@@ -293,3 +293,4 @@ def show():
         Without this correction, every financial model would overestimate profits and underestimate risk.
 
         """)
+
